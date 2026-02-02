@@ -4,7 +4,7 @@
 
 ## 📁 Overview
 Two independent Python projects:
-- **Task-1:** Algorithmic Trading Adventure, simulates a simple Golden-Cross Trading Strategy using Python and historical stock data fetched via yfinance. The algorithm automatically buys when a Golden Cross occurs (50-day MA > 200-day MA) and sells when a Death Cross occurs. It starts with a capital and reports the final profit / loss.
+- **Task-1:** Algorithmic Trading Adventure, simulates a simple Golden-Cross Trading Strategy using Python and historical stock data fetched via yfinance. The algorithm automatically buys when a Golden Cross occur (50-day MA > 200-day MA) and sells when a Death Cross occurs. It starts with a capital and reports the final profit / loss.
 - **Task-2:** Samsung Phone Advisor API, An intelligent FastAPI-based service for Samsung phone queries. Uses PostgreSQL for data storage and sentence-transformers for semantic similarity. Supports comparison, specification lookup, best-feature search, and recommendations. Fully tested with sample inputs from the assignment and produces correct structured JSON outputs.
 
 | # | Project | Domain | Description |
