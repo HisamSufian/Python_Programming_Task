@@ -15,7 +15,7 @@ Original file is located at
 
 # Install yfinance (needed to fetch market data from Yahoo Finance).
 # Run once per Colab session. The --quiet flag hides verbose install logs.
-!pip install yfinance --quiet
+# !pip install yfinance --quiet
 
 # Core imports:
 # - yfinance: to download historical price data
