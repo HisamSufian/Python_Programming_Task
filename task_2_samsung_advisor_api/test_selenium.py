@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
-# 👇 change path if different
+# 👇 change path if different 
 service = Service(r"C:\Users\hp\Downloads\task\chromedriver.exe")
 
 options = Options()
@@ -13,3 +13,4 @@ driver.get("https://www.gsmarena.com/samsung-phones-9.php")
 
 print("✅ Page title:", driver.title)
 driver.quit()
+
