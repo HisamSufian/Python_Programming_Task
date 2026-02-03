@@ -7,7 +7,7 @@ This project creates an **AI-powered API** that intelligently answers questions 
 It uses:
 - **FastAPI** for serving responses  
 - **PostgreSQL** to store the phone dataset  
-- **SentenceTransformer** + **GPT-2 pipeline** for semantic similarity and text generation  
+- **SentenceTransformer** for semantic retrieval and Transformer-based text generation for response synthesis  
 
 ---
 
@@ -65,19 +65,37 @@ Then open your browser at:
 
 ---
 
-## ⚙️ Internal Logic
-- **Intent Detection** → detects if the question is about comparison, specs, or recommendation.  
-- **Semantic Model Matching** → finds the closest Samsung model using `SentenceTransformer`.  
-- **Comparison Engine** → compares two models based on Camera, Battery, and Display.  
-- **Recommendation Engine** → suggests best model by context (gaming, photography, etc.).  
+## ⚙️ Internal Logic (RAG + Multi-Agent Design)
+
+The system follows a unified Retrieval-Augmented Generation (RAG) and multi-agent architecture:
+
+- **RAG Module**
+  - Retrieves structured phone specifications from PostgreSQL
+  - Uses semantic similarity to identify the most relevant Samsung models
+  - Answers direct factual questions (e.g., specifications, prices)
+
+- **Agent 1 — Data Extraction Agent**
+  - Fetches relevant phone records from PostgreSQL based on the query
+  - Handles filtering, comparison candidates, and constraints (e.g., price limit)
+
+- **Agent 2 — Review & Recommendation Agent**
+  - Generates natural-language comparisons and recommendations
+  - Uses retrieved data as context to produce human-like explanations
+
+- **Response Composer**
+  - Combines structured facts with generated insights
+  - Returns a single unified response to the user
+  
 
 ---
 
 ## 📂 Folder Structure
 ```
 task_2_samsung_advisor_api/
- ├── samsung_advisor_api.py
+ ├── samsung_scraper.py
+ ├── samsung_phones.csv
  ├── insert_to_postgres.py
+ ├── samsung_advisor_api.py
  ├── test_selenium.py
  ├── requirements.txt
  └── README.md
