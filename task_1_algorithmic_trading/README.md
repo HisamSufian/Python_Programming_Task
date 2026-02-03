@@ -29,12 +29,14 @@ matplotlib
 ```bash
 python task_1_gcse.py
 ```
-**(Optional): You can run it in Google Colab or Jupyter simply by only runinng the file *task_1_gcsc.py***
+**(Optional): The script can also be executed in Jupyter Notebook or Google Colab
+after installing the required dependencies.
+**
 
 ---
 
 ## 🧠 Algorithm Steps
-1. **Initialize Class** with stock symbol and date range → `class_Name("AAPL","2018-01-01","2023-12-31")`  
+1. **Initialize Class** with stock symbol and date range → `TradingStrategy("AAPL","2018-01-01","2023-12-31")`  
 2. **Download Data** using `yfinance.download()`  
 3. **Clean Data** → remove duplicates & forward-fill NaNs  
 4. **Calculate Moving Averages** → 50-day and 200-day  
@@ -46,6 +48,8 @@ python task_1_gcse.py
 ---
 
 ## 💻 Sample Output
+(Note: Output values may vary depending on market data updates from Yahoo Finance.)
+
 ```
 Trading Results
 ✅Initial Budget: $5000.00
