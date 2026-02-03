@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 import time
 
-# --- Setup your ChromeDriver path ---
+# --- Setup your ChromeDriver path --- 
 service = Service(r"C:\Users\hp\Downloads\task\chromedriver.exe") 
 options = Options()
 options.add_argument("--headless")
@@ -56,3 +56,4 @@ df.to_csv("samsung_phones.csv", index=False, encoding="utf-8")
 print("\n✅ Scraped", len(df), "phones successfully and saved to samsung_phones.csv")
 
 driver.quit()
+
